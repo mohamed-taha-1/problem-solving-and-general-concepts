@@ -31,9 +31,50 @@ log/
 
 target/
 
+# Ignore IDE files
+
 build/
+.idea/
 
 
 doc/
 
+
 *.class
+# Ignore build artifacts
+
+target/
+
+build/
+
+
+# Ignore log files
+
+logs/
+
+
+# Ignore temporary files
+
+temp/
+
+
+# Ignore dependency management files
+
+pom.xml
+
+gradle.properties
+
+gradle.xml
+
+gradlew
+
+gradlew.bat
+
+gradle/
+
+.gradle/
+
+
+# Ignore database files
+
+db.sqlite
