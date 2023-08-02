@@ -6,7 +6,7 @@ import java.util.Stack;
 
 public class _94_Binary_Tree_Inorder_Traversal {
 
-	public class TreeNode {
+	public static class TreeNode {
 		int val;
 		TreeNode left;
 		TreeNode right;
