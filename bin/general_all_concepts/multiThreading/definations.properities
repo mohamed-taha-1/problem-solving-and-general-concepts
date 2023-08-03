@@ -1,0 +1,86 @@
+- threads with high priority is first serve based on the algorithms of thread scheduler `First-come-first-serve`.
+- Because of race condition problem this will lead to many impacts like : ( Memory leak  - Inconsistent data [Lost-Update] - dirty read 
+ - DeadLock - Live-lock )
+ 
+ - Thread.yield() : it give the thread scheduler that this thread is working  an dready to yield its processor;;; but is dose not affect it keda walla keda it run randomely
+                    and thread scheduler may ignore it.
+                    
+ - Thread.join() : for example request each thread to join main thread, and make main thread wait untill  all other threads will be executed.
+                    
+ - Thread demon: it is support for anther thread ;; aetDaemon(true);
+ - ThreadGroup:    this helps to mange a group of threads a single unit
+- Avoid receCondion : by build Synchronization in critical section of execution. 
+
+
+** Monitor/ Mutex: is a mechanism to syncronize threads access the critical sections.
+                  - and this concept come with methods such as ( wait(), notify(), notifyAll() )
+                  - Monitor and Mutex (mutual exclusion) are the same but different in implementaion ; rather than monitor is light weaigth and faster in inplementaion and provided by the framework itself and not request ro the operating system 
+                  - Mutex are provided by operating systems kernal 
+                  - Monitor is built on top of mutex
+  ### example 1 ####3
+  public static void incrementWithSyncBlock() {
+          sysout(); 
+		synchronized (SynchronizedIncrement.class) {  // here we just make the piece of code aree syncrinized to avid critical section on it ; and you do net need to make sysnronized to all method (example 2)
+			counter++;
+		}
+		sysout();
+	}
+	
+#### example 2 ####
+public synchronized static void increment() {
+		counter++;
+	}	
+
+
+===> to make example 1 same as exmple to use in the block synchronized (this) {  ...}
+==> there are drwa back for syncronize method block like , you need to capture the block in one place and realse it in anther place
+==> additional advantge of syncronized block; that you can pass any object as a refrence to it to capture monitor
+
+
+=============== memory management======================
+-volatile 
+================= Deadlock ===========
+
+- deadlock: is a state where 2 or more threads are blocked forever waiting each other.
+            - this cause if 2 threads obtain the same lock in different order!
+            > to solve this: do not use multiple locks inside one thread  
+                             - or capture multiple locks in the same order in different threads 
+                             - or use time constraints yo acquire lock
+ 
+- Live-lock: - occurs when 2 or more processes continually repeat the same interaction in response to changes in the other processes without doing any useful work!  
+
+=================== Lock api =========
+
+- is better than syncronization , The Lock interface provides more flexibility .
+-  It allows you to choose between different implementations of locks, such as ReentrantLock, ReadWriteLock, or StampedLock  based on your specific needs.
+-  With Lock, you have finer-grained control over locking and unlocking, allowing for more advanced synchronization scenarios.
+- supports features like fairness (giving priority to the longest-waiting thread), lock timeouts, and condition variables (Condition), which can help in more complex synchronization scenarios.
+
+-Error Handling: The Lock interface allows explicit handling of locking failures by providing methods like tryLock(), which attempts to acquire the lock without blocking. 
+
+! Synchronized block or method: are suitable for basic synchronization needs.
+
+-!; In summary, if you have complex synchronization requirements or need advanced features like fairness, lock timeouts, or explicit error handling, the Lock interface can be a better choice.
+
+advantages: - lock may obtained and released in different places
+            - Time limit to aquire the lock to avoid deadlocks 
+            - work with conditions 
+            - fairness of threads that are waiting for lock longer than other threads 
+            - Lock APi use the interrupt thread when it is waiting for the lock
+            
+
+- Lock interface has 6 methods 
+            
+            
+            
+            
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
