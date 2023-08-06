@@ -1,4 +1,4 @@
-package findAllAnagramsinaString;
+package medium.findAllAnagramsinaString;
 
 public class FindAllAnagramsinaString {
 
