@@ -1,6 +1,8 @@
 # problem-solving-and-general-concepts
 
-Problem-solving and general concepts:   [ Leetcode_profile](#https://leetcode.com/mohamed_taha/)
+- [LeetCode Profile](https://leetcode.com/mohamed_taha/)
+
+Welcome to my Git repository! This repository contains my solutions to various programming problems and other general concepts related to software development.
 
 ## Table of Contents
 
