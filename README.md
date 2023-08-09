@@ -17,9 +17,8 @@ Welcome to my Git repository! This repository contains my solutions to various p
 
 ## Features
 
-- **Core Java concepts package**: You will find all core concepts like multithreading and design patterns and solid explanations for all types.
-- ```bash
-     https://github.com/mohamed-taha-1/problem-solving-and-general-concepts/tree/general/src/other_concepts
+- **Core Java concepts package**: You will find all core concepts like multithreading and design patterns and solid explanations for all 
+    [#Repo](https://github.com/mohamed-taha-1/problem-solving-and-general-concepts/tree/general/src/other_concepts)
 ## Installation
 
 Follow these simple steps to get started with  problem-solving-and-general-concepts:
