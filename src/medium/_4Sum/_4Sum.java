@@ -1,4 +1,4 @@
-package _4Sum;
+package medium._4Sum;
 
 import java.util.ArrayList;
 import java.util.Arrays;
