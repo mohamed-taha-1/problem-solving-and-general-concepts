@@ -1,4 +1,4 @@
-package _110_BalancedBinaryTree;
+package easy._110_BalancedBinaryTree;
 
 import java.util.LinkedList;
 import java.util.Queue;

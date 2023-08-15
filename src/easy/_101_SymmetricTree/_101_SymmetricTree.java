@@ -1,4 +1,4 @@
-package _101_SymmetricTree;
+package easy._101_SymmetricTree;
 
 public class _101_SymmetricTree {
 

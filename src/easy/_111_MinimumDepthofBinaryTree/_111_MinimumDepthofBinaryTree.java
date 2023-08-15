@@ -1,4 +1,4 @@
-package _111_MinimumDepthofBinaryTree;
+package easy._111_MinimumDepthofBinaryTree;
 
 import java.util.LinkedList;
 import java.util.Queue;

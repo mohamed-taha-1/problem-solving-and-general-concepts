@@ -1,4 +1,4 @@
-package _104_MaximumDepthofBinaryTree;
+package easy._104_MaximumDepthofBinaryTree;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
