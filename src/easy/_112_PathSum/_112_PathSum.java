@@ -1,4 +1,4 @@
-package _112_PathSum;
+package easy._112_PathSum;
 
 import java.util.Stack;
 

@@ -1,4 +1,4 @@
-package _108_ConvertSortedArraytoBinarySearchTree;
+package easy._108_ConvertSortedArraytoBinarySearchTree;
 
 public class _108_ConvertSortedArraytoBinarySearchTree {
 
