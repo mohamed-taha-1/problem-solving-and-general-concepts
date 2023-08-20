@@ -1,4 +1,4 @@
-package multiThreading.executor;
+package general_all_concepts.multiThreading.executor;
 
 import java.security.Timestamp;
 import java.util.ArrayList;

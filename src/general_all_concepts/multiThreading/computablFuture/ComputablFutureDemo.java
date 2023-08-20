@@ -1,4 +1,4 @@
-package multiThreading.computablFuture;
+package general_all_concepts.multiThreading.computablFuture;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
@@ -14,7 +14,7 @@ public class ComputablFutureDemo {
 			System.out.println("the second patch ");
 			
 		});
-		
+//		
 		TimeUnit.SECONDS.sleep(2);
 		
 		ExecutorService es= Executors.newFixedThreadPool(6);

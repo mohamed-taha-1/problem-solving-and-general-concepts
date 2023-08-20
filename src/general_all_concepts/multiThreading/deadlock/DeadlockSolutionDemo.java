@@ -1,4 +1,4 @@
-package multiThreading.deadlock;
+package general_all_concepts.multiThreading.deadlock;
 
 
 import java.util.concurrent.TimeUnit;

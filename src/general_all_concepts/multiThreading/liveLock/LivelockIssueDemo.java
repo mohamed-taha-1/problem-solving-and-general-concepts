@@ -1,4 +1,4 @@
-package multiThreading.liveLock;
+package general_all_concepts.multiThreading.liveLock;
 
 
 import java.util.concurrent.TimeUnit;

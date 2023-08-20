@@ -1,4 +1,4 @@
-package multiThreading.lockApi;
+package general_all_concepts.multiThreading.lockApi;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

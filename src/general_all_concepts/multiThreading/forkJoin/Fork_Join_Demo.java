@@ -1,4 +1,4 @@
-package multiThreading.forkJoin;
+package general_all_concepts.multiThreading.forkJoin;
 
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.RecursiveAction;

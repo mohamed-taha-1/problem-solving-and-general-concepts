@@ -1,4 +1,4 @@
-package multiThreading._5_synchronizerClass;
+package general_all_concepts.multiThreading._5_synchronizerClass;
 
 import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;

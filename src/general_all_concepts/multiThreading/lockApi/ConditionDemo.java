@@ -1,4 +1,4 @@
-package multiThreading.lockApi;
+package general_all_concepts.multiThreading.lockApi;
 
 import java.util.Deque;
 import java.util.LinkedList;
