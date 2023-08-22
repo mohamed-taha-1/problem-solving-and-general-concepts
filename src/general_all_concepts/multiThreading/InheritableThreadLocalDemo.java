@@ -1,4 +1,4 @@
-package multiThreading;
+package general_all_concepts.multiThreading;
 
 
 import java.util.concurrent.TimeUnit;

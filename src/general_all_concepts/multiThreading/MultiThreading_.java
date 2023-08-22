@@ -1,4 +1,4 @@
-package multiThreading;
+package general_all_concepts.multiThreading;
 
 public class MultiThreading_ extends Thread {
 
