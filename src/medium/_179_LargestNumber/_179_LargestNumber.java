@@ -20,7 +20,7 @@ public class _179_LargestNumber {
 		
 		Arrays.sort(strArray, (a,b)-> (b+a).compareTo(a+b) );
 
-		if(strArray[0]=="0") return"0"; // If the largest number is "0", return "0"
+		if(strArray[0].equals("0")) return"0"; // If the largest number is "0", return "0"
 		
 		for(String str:strArray) sb.append(str);
 		
