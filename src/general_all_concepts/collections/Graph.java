@@ -12,7 +12,8 @@ public class Graph {
 	public Graph(int vertices) {
 		this.vertices=vertices;
 		this.adjecancyList=new LinkedList[vertices];
-		 for (int i = 0; i < vertices; i++) {
+		
+		for (int i = 0; i < vertices; i++) {
 			 adjecancyList[i] = new LinkedList<>();
 	        }
 	}
