@@ -1,4 +1,4 @@
-package general_all_concepts.collections;
+package general_all_concepts.collections.graph;
 
 public class AdjacencyMatrixGraph {
 	private int V; // Number of vertices
