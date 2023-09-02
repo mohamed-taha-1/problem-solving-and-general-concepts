@@ -5,8 +5,6 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-import javax.management.Query;
-
 public class Solution2 {
 
 	public static int findCenter(int[][] edges) {
