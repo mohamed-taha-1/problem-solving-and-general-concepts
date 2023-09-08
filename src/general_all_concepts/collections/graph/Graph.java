@@ -36,7 +36,17 @@ public class Graph {
 	    }
 	 
 
-	
+	 public Graph reverse() {
+	        Graph reversedGraph = new Graph(vertices);
+
+	        for (int i = 0; i < vertices; i++) {
+	            for (int neighbor : adjecancyList[i]) {
+	                reversedGraph.addEdge(neighbor, i); // Reverse edges
+	            }
+	        }
+
+	        return reversedGraph;
+	    }
 	
 	public static void main(String[] args) {
     		  int numVertices = 4;
@@ -46,6 +56,11 @@ public class Graph {
 	        graph.addEdge(1, 2);
 	        graph.addEdge(1, 3);
 	        graph.printGraph();
+	        
+	        Graph reversedGraph = graph.reverse();
+
+	        System.out.println("\nReversed Graph:");
+	        reversedGraph.printGraph();
 
 
 	}

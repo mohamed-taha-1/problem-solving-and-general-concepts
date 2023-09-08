@@ -12,7 +12,7 @@ public class PhaserDemo {
 	private static Phaser phaser = new Phaser();
 
 	public static void main(String[] args) throws InterruptedException {
-		
+
 		/*
 		 * similar to cyclic barrier phaser here implement also barrier but with
 		 * flexible approach with this type you can synchronise threads that represents
@@ -37,22 +37,61 @@ public class PhaserDemo {
 		 * <p>
 		 * https://www.educative.io/courses/java-multithreading-for-senior-engineering-
 		 * interviews/myznjjJ838O
+		 * 
+		 * Threads that need to participate in the synchronization should register
+		 * themselves with the Phaser: phaser.register();
+		 * 
+		 * // Threads arrive and continue without waiting phaser.arrive();
+		 * 
+		 * // Threads arrive and wait for others to arrive
+		 * phaser.arriveAndAwaitAdvance();
+		 * 
+		 * phaser.arriveAndAwaitAdvance(); // Wait for all threads to arrive and proceed
+		 * 
+		 * Threads can deregister from the Phaser when they no longer need to
+		 * participate in synchronization phaser.arriveAndDeregister();
+		 * 
+		 * 
+		 * 
+		 * 
+		 * 
+		 * 
 		 */
-		var es = Executors.newFixedThreadPool(4);
-
-	//	System.out.println("Phase before tasks execution: " + phaser.getPhase());
-		
-		IntStream.range(0, 4).forEach(i -> es.submit(new Task(phaser)));
-		es.shutdown();
-
-		es.awaitTermination(1, TimeUnit.SECONDS);
-		
-		System.out.println("Parties after all threads are de-registered: " + phaser.getRegisteredParties());
+//		var es = Executors.newFixedThreadPool(4);
+//
+//		// System.out.println("Phase before tasks execution: " + phaser.getPhase());
+//
+//		IntStream.range(0, 4).forEach(i -> es.submit(new Task(phaser)));
+//		es.shutdown();
+//
+//		es.awaitTermination(1, TimeUnit.SECONDS);
+//
+//		System.out.println("Parties after all threads are de-registered: " + phaser.getRegisteredParties());
 
 		// second method
 //		method2Phase()
+		
+		main2();
 
 	}
+	
+	public static void main2() {
+        Phaser phaser = new Phaser(3); // Three threads will participate
+
+        Runnable task = () -> {
+            System.out.println("Thread arrived at Phaser.");
+            phaser.arriveAndAwaitAdvance(); // Wait for all threads to arrive
+
+            System.out.println("Thread continued...");
+            phaser.arriveAndDeregister(); // Deregister from Phaser
+        };
+
+        for (int i = 0; i < 3; i++) {
+            new Thread(task).start();
+        }
+    }
+	
+	
 
 	private static class Task implements Runnable {
 		private Phaser phaser;
@@ -64,24 +103,23 @@ public class PhaserDemo {
 
 		@Override
 		public void run() {
-			System.out.println("paheser"+ phaser.arriveAndAwaitAdvance());
-			
+			System.out.println("paheser" + phaser.arriveAndAwaitAdvance());
+
 			try {
-				
+
 				TimeUnit.MILLISECONDS.sleep(100);
-				
+
 				System.out.println("getPhase(): " + phaser.getPhase());
-				
+
 				System.out.println("Arrived in thread: " + Thread.currentThread().getName());
-				
+
 				System.out.println("Arrival phase number: " + phaser.arriveAndAwaitAdvance());
-				
+
 				TimeUnit.MILLISECONDS.sleep(100);
-				
+
 				// It just an impct or reprsentaion of number of phases
 //				System.out.println("getPhase(): " + phaser.getPhase()); 
-			
-			
+
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
@@ -99,7 +137,7 @@ public class PhaserDemo {
 		Phaser phaser = new Phaser(1);
 
 		try {
-			
+
 			// a thread registers with the Phaser post construction of the instance
 			executorService.submit(new Runnable() {
 				@Override
