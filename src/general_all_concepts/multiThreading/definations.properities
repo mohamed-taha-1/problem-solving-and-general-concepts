@@ -2,7 +2,7 @@
 - Because of race condition problem this will lead to many impacts like : ( Memory leak  - Inconsistent data [Lost-Update] - dirty read 
  - DeadLock - Live-lock )
  
- - Thread.yield() : it give the thread scheduler that this thread is working  an dready to yield its processor;;; but is dose not affect it keda walla keda it run randomely
+ - Thread.yield() : it give the thread scheduler that this thread is working  an dirty to yield its processor;;; but is dose not affect it keda walla keda it run randomely
                     and thread scheduler may ignore it.
                     
  - Thread.join() : for example request each thread to join main thread, and make main thread wait untill  all other threads will be executed.
@@ -45,7 +45,7 @@ public synchronized static void increment() {
             - this cause if 2 threads obtain the same lock in different order!
             > to solve this: do not use multiple locks inside one thread  
                              - or capture multiple locks in the same order in different threads 
-                             - or use time constraints yo acquire lock
+                             - or use time constraints you acquire lock
  
 - Live-lock: - occurs when 2 or more processes continually repeat the same interaction in response to changes in the other processes without doing any useful work!  
 
