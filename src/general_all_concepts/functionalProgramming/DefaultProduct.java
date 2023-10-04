@@ -1,4 +1,4 @@
-package functionalProgramming;
+package general_all_concepts.functionalProgramming;
 
 public class DefaultProduct {
 

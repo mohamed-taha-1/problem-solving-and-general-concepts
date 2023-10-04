@@ -1,4 +1,4 @@
-package streamsApi;
+package general_all_concepts.streamsApi;
 
 import java.util.Arrays;
 import java.util.Collection;

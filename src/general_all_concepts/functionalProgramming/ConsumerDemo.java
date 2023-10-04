@@ -1,4 +1,4 @@
-package functionalProgramming;
+package general_all_concepts.functionalProgramming;
 
 
 import java.util.ArrayList;
@@ -14,28 +14,28 @@ public class ConsumerDemo {
 	public static void main(String[] args) {
 		System.out.println("========== Consumer demo ==========");
 		
-		List<Product> products = new ArrayList<>(Arrays.asList(
-					new DefaultProduct(1, "Product 1", "Category 1", 99.99),
-					new DefaultProduct(2, "Product 2", "Category 2", 149.99),
-					new DefaultProduct(3, "Product 3", "Category 3", 39.99)
-				));
+//		List<Product> products = new ArrayList<>(Arrays.asList(
+//					new DefaultProduct(1, "Product 1", "Category 1", 99.99),
+//					new DefaultProduct(2, "Product 2", "Category 2", 149.99),
+//					new DefaultProduct(3, "Product 3", "Category 3", 39.99)
+//				));
 		
-		increasePriceForProductList(products, 10);
-		for (Product product : products) {
-			System.out.println(product);
-		}
+//		increasePriceForProductList(products, 10);
+//		for (Product product : products) {
+//			System.out.println(product);
+//		}
 		
-		System.out.println("========== BiConsumer demo ==========");
-		Map<Integer, Product> idProductMap = new HashMap<>();
-		idProductMap.put(1, new DefaultProduct(1, "Product 1", "Category 1", 99.99));
-		idProductMap.put(2, new DefaultProduct(2, "Product 2", "Category 2", 149.99));
-		idProductMap.put(3, new DefaultProduct(3, "Product 3", "Category 3", 39.99));
-		
-		increasePriceForProductMap(idProductMap, 10);
-		for (Product product : idProductMap.values()) {
-			System.out.println(product);
-		}
-	
+//		System.out.println("========== BiConsumer demo ==========");
+//		Map<Integer, Product> idProductMap = new HashMap<>();
+//		idProductMap.put(1, new DefaultProduct(1, "Product 1", "Category 1", 99.99));
+//		idProductMap.put(2, new DefaultProduct(2, "Product 2", "Category 2", 149.99));
+//		idProductMap.put(3, new DefaultProduct(3, "Product 3", "Category 3", 39.99));
+//		
+//		increasePriceForProductMap(idProductMap, 10);
+//		for (Product product : idProductMap.values()) {
+//			System.out.println(product);
+//		}
+//	
 	}
 	
 	public static void increasePriceForProductList(List<? extends Product> products, 

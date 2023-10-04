@@ -1,4 +1,4 @@
-package generics;
+package general_all_concepts.generics;
 
 
 import java.util.Comparator;

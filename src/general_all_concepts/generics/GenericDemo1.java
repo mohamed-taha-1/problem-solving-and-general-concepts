@@ -1,4 +1,4 @@
-package generics;
+package general_all_concepts.generics;
 
 public class GenericDemo1 {
 	

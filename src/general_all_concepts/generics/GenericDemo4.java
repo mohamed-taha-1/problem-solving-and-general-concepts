@@ -1,4 +1,4 @@
-package generics;
+package general_all_concepts.generics;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,8 +17,8 @@ public class GenericDemo4 {
 		
 		List<Parent> parents = new ArrayList<>();
 		List<Child> children2 = new ArrayList<>();
- 		processElements2(parents);
-		processElements2(children2);
+// 		processElements2(parents);
+//		processElements2(children2);
 		
 		List<Grandchild> grandChildren = new ArrayList<>();
 //		processElements2(grandChildren); // compilation error
@@ -30,6 +30,8 @@ public class GenericDemo4 {
 	public static void processParentElements(List<Parent> parents) {}
 	
 	public static void processElements(List<? extends Parent> elements) {
+//		 represents a wildcard with an upper bound
+		 
 		Parent parent = elements.get(0);
 //		Child child = elements.get(0); // compilation error
 //		
@@ -40,16 +42,10 @@ public class GenericDemo4 {
 		elements.add(null);
 	}
 	
-	public static void processElements2(List<? super Child> elements) {
-		Object element = elements.get(0);
-//		Child parentElement = elements.get(0); // compilation error
-		
-		elements.add(new Child());
-		elements.add(new Grandchild());
-		elements.add(null);
-		
-//		elements.add(new Parent());
-//		elements.add(new Object());
+	public void doSomething(List<? super Child> myList) {
+	    // You can add elements of type Child or any superclass of Child to the list
+	    myList.add(new Child());
+	    //myList.add(new Grandparent()); // Grandparent is a superclass of Child
 	}
 	
 }
